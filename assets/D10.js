@@ -325,21 +325,31 @@ function onlyInLastMillennium(millenio){
   for(let i = 0; i < millenio.length; i++){
   const annata = millenio[i].Year
   const numeroIntero = parseInt(annata)
-  filmMillenio.push(numeroIntero)
+  if(numeroIntero > 1000 && numeroIntero > 2000){
+    filmMillenio.push(numeroIntero)
   }
-  if(filmMillenio < 2000){
-    return filmMillenio
-  }else{
-  }
+}
 }
 console.log(filmMillenio)
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
+const arrayAnno = [2000, 2004, 1970, 1996, 2009]
+
+function sumAllTheYears(movies){
+  return movies.reduce((somma, numero) => somma + numero, 0)
+}
+
+let risultato = sumAllTheYears(arrayAnno)
+console.log(sumAllTheYears(arrayAnno))
+
+// ho creato un array fittizio invece di ricavare i numri dal movies e dargli il parseint per una quesione di tempo
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+
+
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
@@ -356,14 +366,30 @@ console.log(filmMillenio)
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
+function getId(){
+  const prendoId = document.getElementById("container")
+}
+getId()
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
+function getAllTd(){
+  const prendoTd = document.querySelectorAll("td")
+}
+getAllTd()
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
+function stampaTd(){
+  const testoTd = document.getElementsByTagName("td")
+  for (let i = 0; i < testoTd.length; i++){
+    console.log(testoTd[i].textContent)
+  }
+}
+
+stampaTd()
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
