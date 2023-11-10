@@ -432,7 +432,14 @@ svuotaLista()
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
+function ao(){
+  const prendiTutto = document.querySelectorAll("tr")
+  for(let i = 0; i<prendiTutto.length;i++){
+    prendiTutto[i].classList.add("test")
+  }
+}
 
+ao()
 
 // [EXTRA] JS Avanzato
 
