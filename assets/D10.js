@@ -419,6 +419,15 @@ aggiungoElemento()
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+function svuotaLista(){
+  const listaSvuotata = document.getElementById("myList")
+  for( let i = 0; i < listaSvuotata.length;i++){
+    const li = document.querySelectorAll("li")
+    listaSvuotata[i].remove()
+  }
+  
+}
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
