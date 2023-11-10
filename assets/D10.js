@@ -394,9 +394,26 @@ stampaTd()
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+function linkRosso(){
+  const colorRed = document.querySelectorAll("a")
+  for( let i = 0; i < colorRed.length; i++){
+    colorRed[i].style.backgroundColor = "red"
+
+  }
+}
+
+linkRosso()
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+
+function aggiungoElemento(){
+  const unorderList = document.getElementById("myList")
+  const altroLi = document.createElement("li")
+  unorderList.appendChild(altroLi)
+}
+
+aggiungoElemento()
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
